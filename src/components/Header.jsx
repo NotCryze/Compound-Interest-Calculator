@@ -1,11 +1,21 @@
-import { Group } from "@mantine/core"
+import { Group, Container, UnstyledButton, Modal } from "@mantine/core"
+import { IconSettings } from '@tabler/icons-react';
+import { useDisclosure } from '@mantine/hooks';
 
 const header = () => {
-
+    const [opened, { open, close }] = useDisclosure(false);
     return (
-        <Group h="100%" px="md">
-            <h4>Compound Interest Calculator</h4>
-        </Group>
+        <Container>
+            <Group justify="space-between">
+                <h4>Compound Interest Calculator</h4>
+                <UnstyledButton onClick={open}><IconSettings></IconSettings></UnstyledButton>
+                <Modal opened={opened} onClose={close} title="Settings" centered>
+                    {
+                        
+                    }
+                </Modal>
+            </Group>
+        </Container>
     )
 }
 

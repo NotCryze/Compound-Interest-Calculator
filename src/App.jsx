@@ -8,7 +8,7 @@ import '@mantine/charts/styles.css';
 
 function App() {
   return (
-    <MantineProvider defaultColorScheme="dark">
+    <MantineProvider defaultColorScheme="auto">
       <AppShell
         header={{ height: "4rem" }}
         footer={{ height: "2rem" }}

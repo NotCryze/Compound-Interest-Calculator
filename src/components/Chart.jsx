@@ -10,9 +10,11 @@ const chart = ({ data }) => {
                 data={data}
                 dataKey="year"
                 series={[
-                    { name: 'EUR' }
+                    { name: 'EUR', color: "indigo.6" },
+                    { name: 'TAX', color: "red.6" }
                 ]}
                 tickLine="y"
+                type='stacked'
             />
         </Center>
     )
