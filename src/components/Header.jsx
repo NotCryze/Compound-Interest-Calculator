@@ -1,23 +1,19 @@
-import { useMantineColorScheme, Group, Container, UnstyledButton, Modal, Button } from "@mantine/core"
-import { IconSettings, IconSun, IconMoon } from '@tabler/icons-react';
-import { useDisclosure } from '@mantine/hooks';
+import { useMantineColorScheme, Group, Container, Button, Text, Flex } from "@mantine/core"
+import { IconSun, IconMoon } from '@tabler/icons-react';
 
 const Header = () => {
-    const [opened, { open, close }] = useDisclosure(false);
-    const { setColorScheme, clearColorScheme } = useMantineColorScheme();
+    const { setColorScheme } = useMantineColorScheme();
     return (
-        <Container>
-            <Group justify="space-between">
-                <h4>Compound Interest Calculator</h4>
+        <Container h="100%">
+            <Flex justify="space-between" align="center" h="100%">
+                <Text size="xl" >
+                    <Text span c="grape">C</Text>ompound&nbsp;
+                    <Text span c="grape">I</Text>nterest&nbsp;
+                    <Text span c="grape">C</Text>alculator&nbsp;
+                </Text>
                 <Button variant="outline" onClick={() => setColorScheme('dark')} darkHidden><IconMoon></IconMoon></Button>
                 <Button variant="outline" onClick={() => setColorScheme('light')} lightHidden><IconSun></IconSun></Button>
-                {/* <UnstyledButton onClick={open}><IconSettings></IconSettings></UnstyledButton>
-                <Modal opened={opened} onClose={close} title="Settings" centered>
-                    {
-                        
-                    }
-                </Modal> */}
-            </Group>
+            </Flex>
         </Container>
     )
 }

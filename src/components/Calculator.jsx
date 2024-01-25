@@ -70,7 +70,7 @@ const Calculator = ({ onCalculate }) => {
                         {...form.getInputProps('deposit')}
                     />
                 </Input.Wrapper>
-                <Input.Wrapper label="Monthly Contribution" error="" size="md" mb="1rem">
+                <Input.Wrapper label="Monthly contribution" error="" size="md" mb="1rem">
                     <NumberInput
                         placeholder="€"
                         suffix=' €'
