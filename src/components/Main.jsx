@@ -4,7 +4,7 @@ import Chart from "./Chart"
 import { useState } from 'react'
 
 
-const main = ({ }) => {
+const Main = ({ }) => {
     const [chartData, setChartData] = useState([])
     const [total, setTotal] = useState(0)
     const [final, setFinal] = useState(0)
@@ -63,4 +63,4 @@ const main = ({ }) => {
     )
 }
 
-export default main
+export default Main

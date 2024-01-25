@@ -1,22 +1,25 @@
-import { Group, Container, UnstyledButton, Modal } from "@mantine/core"
-import { IconSettings } from '@tabler/icons-react';
+import { useMantineColorScheme, Group, Container, UnstyledButton, Modal, Button } from "@mantine/core"
+import { IconSettings, IconSun, IconMoon } from '@tabler/icons-react';
 import { useDisclosure } from '@mantine/hooks';
 
-const header = () => {
+const Header = () => {
     const [opened, { open, close }] = useDisclosure(false);
+    const { setColorScheme, clearColorScheme } = useMantineColorScheme();
     return (
         <Container>
             <Group justify="space-between">
                 <h4>Compound Interest Calculator</h4>
-                <UnstyledButton onClick={open}><IconSettings></IconSettings></UnstyledButton>
+                <Button variant="outline" onClick={() => setColorScheme('dark')} darkHidden><IconMoon></IconMoon></Button>
+                <Button variant="outline" onClick={() => setColorScheme('light')} lightHidden><IconSun></IconSun></Button>
+                {/* <UnstyledButton onClick={open}><IconSettings></IconSettings></UnstyledButton>
                 <Modal opened={opened} onClose={close} title="Settings" centered>
                     {
                         
                     }
-                </Modal>
+                </Modal> */}
             </Group>
         </Container>
     )
 }
 
-export default header
+export default Header
