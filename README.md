@@ -1,1 +1,1 @@
-# Compound Interest Calculator
+https://cic.cryze.dev/
